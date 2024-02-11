@@ -1,0 +1,18 @@
+<header>
+  <!-- <h2 mat-dialog-title>{{ getData()?.alt }}</h2> -->
+
+  <mat-dialog-content>
+    <h3>Descrissão</h3>
+    <article [innerHTML]="getData()?.description"></article>
+    <nav>
+      @for (item of getData()?.links; track item) {
+      <a [href]="item.href" target="_blank" class="btn btn-primary">{{
+        item.name
+      }}</a>
+      }
+    </nav>
+  </mat-dialog-content>
+  <button (click)="closeModal()">
+    <img src="assets/icons/dialog/close.svg" alt="botao fechar" />
+  </button>
+</header>
