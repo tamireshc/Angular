@@ -12,42 +12,42 @@ export class ExperiencesComponent {
   public arrayExperiences = signal<IExperience[]>([
     {
       summary: {
-        strong: 'Front-enda',
+        strong: 'Front-end',
         p: ' Set 2020 - Present',
       },
       text: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry </p>',
     },
     {
       summary: {
-        strong: 'Front-enda',
+        strong: 'Front-end',
         p: ' Set 2020 - Present',
       },
       text: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry </p>',
     },
     {
       summary: {
-        strong: 'Front-enda',
+        strong: 'Front-end',
         p: ' Set 2020 - Present',
       },
       text: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry </p>',
     },
     {
       summary: {
-        strong: 'Front-enda',
+        strong: 'Front-end',
         p: ' Set 2020 - Present',
       },
       text: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry </p>',
     },
     {
       summary: {
-        strong: 'Front-enda',
+        strong: 'Front-end',
         p: ' Set 2020 - Present',
       },
       text: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry </p>',
     },
     {
       summary: {
-        strong: 'Front-enda',
+        strong: 'Front-end',
         p: ' Set 2020 - Present',
       },
       text: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry </p>',
