@@ -1,3 +1,4 @@
+@if(!getListItens().length){
 <div class="container">
   <img
     src="../../../../../assets/img/task-list-null.png"
@@ -15,3 +16,16 @@
   />
   }
 </div>
+}@else {
+<app-input-add-item
+  [inputListItens]="getListItens()"
+  (outputAddListItens)="getInputAndAddItem($event)"
+/>
+<main class="container">
+  <footer>
+    <button class="btn btn-danger" (click)="deleteAllItens()">
+      Deletar todos os Itens
+    </button>
+  </footer>
+</main>
+}

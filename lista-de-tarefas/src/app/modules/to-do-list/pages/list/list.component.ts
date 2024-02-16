@@ -19,4 +19,8 @@ export class ListComponent {
     localStorage.setItem("@my-list", JSON.stringify([...setListItens, value]))
     this.getListItens.set(JSON.parse(localStorage.getItem("@my-list") || "[]"))
   }
+  public deleteAllItens() {
+    localStorage.removeItem("@my-list")
+    this.getListItens.set([])
+  }
 }
