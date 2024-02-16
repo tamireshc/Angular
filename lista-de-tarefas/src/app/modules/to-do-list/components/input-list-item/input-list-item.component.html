@@ -1,0 +1,19 @@
+@for (item of inputListItens; track item ){
+<label class="input-label-text" [htmlFor]="item.value">
+  <input
+    type="checkbox"
+    #inputCheckbox
+    [checked]="item.checked"
+    (input)="updateItemCheckbox(inputCheckbox.checked, item.value)"
+  />
+  <input
+    type="text"
+    #inputValue
+    [id]="item.value"
+    [value]="item.value"
+    placeholder="Adicione um valor"
+    autofocus
+  />
+  <button class="btn btn-danger-circle" title="delete este item"></button>
+</label>
+}
