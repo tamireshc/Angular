@@ -50,4 +50,20 @@ export class ListComponent {
     })
     return localStorage.setItem("@my-list", JSON.stringify(this.getListItens()))
   }
+
+  public updateItemText(newItem: { value: string, id: string }) {
+    console.log(newItem.id, newItem.value)
+    this.getListItens.update((oldValue: IListItens[]) => {
+      // console.log("old", oldValue, "new", newItem)
+      return oldValue.filter((item) => {
+        if (item.value === newItem.id) {
+          const index = oldValue.indexOf(item)
+          oldValue[index].value = newItem.value;
+        }
+        return item;
+      });
+    })
+
+    return localStorage.setItem("@my-list", JSON.stringify(this.getListItens()))
+  }
 }
