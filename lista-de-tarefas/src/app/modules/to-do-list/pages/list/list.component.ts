@@ -38,6 +38,12 @@ export class ListComponent {
     this.getListItens.set([])
   }
 
+  public deleteItem(ItemToDelete: { value: string }) {
+    const newList = this.getListItens().filter(item => item.value !== ItemToDelete.value)
+    this.getListItens.set(newList)
+    localStorage.setItem("@my-list", JSON.stringify(newList))
+  }
+
   public updateItemCheckbox(newItem: { checked: boolean, id: string }) {
     this.getListItens.update((oldValue: IListItens[]) => {
       return oldValue.filter((item) => {

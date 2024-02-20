@@ -28,4 +28,12 @@ export class InputListItemComponent {
     return this.outputUpdateItemText.emit({ value, id })
   }
 
+  @Output() public outputDeleteItem = new EventEmitter<{
+    value: string;
+  }>();
+
+  public deleteItem(value: string) {
+    return this.outputDeleteItem.emit({ value })
+  }
+
 }
