@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import Swal from 'sweetalert2';
 import { IListItens } from '../../../../interfaces/IListItens';
 import { InputAddItemComponent } from '../../components/input-add-item/input-add-item.component';
 import { InputListItemComponent } from '../../components/input-list-item/input-list-item.component';
@@ -34,8 +35,21 @@ export class ListComponent {
   }
 
   public deleteAllItens() {
-    localStorage.removeItem("@my-list")
-    this.getListItens.set([])
+    Swal.fire({
+      title: "Tem certeza?",
+      text: "Não será possível reverter a ação!!!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#2fbf71",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sim, deletar tudo!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.removeItem("@my-list")
+        this.getListItens.set([])
+      }
+    });
+
   }
 
   public deleteItem(ItemToDelete: { value: string }) {
